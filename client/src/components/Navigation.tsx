@@ -140,7 +140,7 @@ export default function Navigation() {
         {/* Mobile menu */}
         <div
           className={cn(
-            "fixed inset-y-0 right-0 w-full max-w-xs bg-background",
+            "fixed inset-y-0 right-0 w-full max-w-xs md:bg-background bg-white",
             "transform transition-transform duration-300 ease-in-out md:hidden",
             "border-l shadow-xl",
             isOpen ? "translate-x-0" : "translate-x-full",
