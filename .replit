@@ -30,6 +30,18 @@ args = "Start Development Server"
 task = "workflow.run"
 args = "Build Static Site"
 
+[[workflows.workflow.tasks]]
+task = "workflow.run"
+args = "Build with Base URL"
+
+[[workflows.workflow.tasks]]
+task = "workflow.run"
+args = "Deploy to GitHub Pages"
+
+[[workflows.workflow.tasks]]
+task = "workflow.run"
+args = "Build and Deploy"
+
 [[workflows.workflow]]
 name = "Start Development Server"
 author = "agent"
@@ -58,3 +70,45 @@ task = "packager.installForAll"
 [[workflows.workflow.tasks]]
 task = "shell.exec"
 args = "npm run build"
+
+[[workflows.workflow]]
+name = "Build with Base URL"
+author = "agent"
+
+[workflows.workflow.metadata]
+agentRequireRestartOnSave = false
+
+[[workflows.workflow.tasks]]
+task = "packager.installForAll"
+
+[[workflows.workflow.tasks]]
+task = "shell.exec"
+args = "VITE_BASE=/jesusruizwebsite/ npm run build"
+
+[[workflows.workflow]]
+name = "Deploy to GitHub Pages"
+author = "agent"
+
+[workflows.workflow.metadata]
+agentRequireRestartOnSave = false
+
+[[workflows.workflow.tasks]]
+task = "packager.installForAll"
+
+[[workflows.workflow.tasks]]
+task = "shell.exec"
+args = "npm run build && npx gh-pages -d dist/public"
+
+[[workflows.workflow]]
+name = "Build and Deploy"
+author = "agent"
+
+[workflows.workflow.metadata]
+agentRequireRestartOnSave = false
+
+[[workflows.workflow.tasks]]
+task = "packager.installForAll"
+
+[[workflows.workflow.tasks]]
+task = "shell.exec"
+args = "VITE_BASE=https://jesusruizorganista.com/ npm run build && npx gh-pages -d dist/public"
