@@ -8,8 +8,8 @@ export default function Home() {
   return (
     <div className="space-y-16">
       {/* Hero Section */}
-      <section className="relative min-h-screen md:min-h-[calc(100vh-4rem)] flex items-center justify-center">
-        <div className="absolute inset-0 z-0">
+      <section className="relative flex items-center justify-center">
+        <div className="absolute inset-0 z-0 h-full">
           <VideoPlayer
             src="/path/to/organ-video.mp4"
             poster="https://images.unsplash.com/photo-1613941854763-c237d27c45d3"
