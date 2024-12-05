@@ -95,7 +95,7 @@ export default function Navigation() {
                     {item.label}
                   </NavigationMenuTrigger>
                   <NavigationMenuContent>
-                    <ul className="grid w-48 gap-1 p-2 md:absolute md:top-[calc(100%+8px)] bg-background border rounded-md shadow-md">
+                    <ul className="grid w-48 gap-1 p-2 animate-in fade-in slide-in-from-top-2 duration-200">
                       {item.items.map((subItem) => (
                         <li key={subItem.href}>
                           <Link href={subItem.href}>
