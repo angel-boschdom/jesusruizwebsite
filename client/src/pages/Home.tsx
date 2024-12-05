@@ -8,7 +8,7 @@ export default function Home() {
   return (
     <div className="space-y-16">
       {/* Hero Section */}
-      <section className="relative min-h-[calc(100vh-4rem)] flex items-center justify-center">
+      <section className="relative min-h-screen md:min-h-[calc(100vh-4rem)] flex items-center justify-center">
         <div className="absolute inset-0 z-0">
           <VideoPlayer
             src="/path/to/organ-video.mp4"
@@ -39,7 +39,7 @@ export default function Home() {
           </div>
         </div>
         
-        <div className="absolute bottom-8 left-1/2 -translate-x-1/2">
+        <div className="absolute bottom-8 left-1/2 -translate-x-1/2 hidden md:block">
           <ArrowDown 
             className="w-8 h-8 animate-bounce-slow cursor-pointer" 
             onClick={() => {
@@ -53,7 +53,7 @@ export default function Home() {
       </section>
 
       {/* Contact Form Section */}
-      <section id="contact" className="max-w-2xl mx-auto px-4">
+      <section id="contact" className="max-w-2xl mx-auto px-4 -mt-16 md:mt-0">
         <h2 className="font-cormorant text-4xl font-bold text-center mb-8">
           Contacto
         </h2>
