@@ -53,6 +53,14 @@
   }
 }
 
+@layer components {
+  .mobile-nav {
+    background-color: var(--background);
+    backdrop-filter: none !important;
+    -webkit-backdrop-filter: none !important;
+  }
+}
+
 .font-cormorant {
   font-family: 'Cormorant Garamond', serif;
 }

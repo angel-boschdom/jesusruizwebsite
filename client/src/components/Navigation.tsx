@@ -140,13 +140,13 @@ export default function Navigation() {
         {/* Mobile menu */}
         <div
           className={cn(
+            "mobile-nav",
             "fixed inset-y-0 right-0 w-full max-w-xs z-[9999]",
-            "!bg-[#1a202c] !text-white",
+            "bg-background/100 backdrop-filter-none",
             "transform transition-transform duration-300 ease-in-out md:hidden",
-            "border-l shadow-xl",
+            "border-l shadow-xl overflow-hidden",
             isOpen ? "translate-x-0" : "translate-x-full",
           )}
-          style={{ backgroundColor: '#1a202c' }}
         >
           <div className="flex h-16 items-center justify-end px-4 border-b">
             <Button
