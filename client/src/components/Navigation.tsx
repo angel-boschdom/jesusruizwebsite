@@ -1,6 +1,6 @@
 import { useState, useEffect } from "react";
 import { Link, useLocation } from "wouter";
-import { Menu, X } from "lucide-react";
+import { Menu, X, ChevronDown, ChevronUp } from "lucide-react";
 import {
   NavigationMenu,
   NavigationMenuContent,
@@ -27,7 +27,16 @@ const eventsItems = [
 
 export default function Navigation() {
   const [isOpen, setIsOpen] = useState(false);
+  const [expandedSections, setExpandedSections] = useState<string[]>([]);
   const [location] = useLocation();
+
+  const toggleSection = (section: string) => {
+    setExpandedSections(prev =>
+      prev.includes(section)
+        ? prev.filter(s => s !== section)
+        : [...prev, section]
+    );
+  };
 
   // Prevent scrolling when mobile menu is open
   useEffect(() => {
@@ -131,7 +140,7 @@ export default function Navigation() {
         {/* Mobile menu */}
         <div
           className={cn(
-            "fixed inset-y-0 right-0 w-full max-w-xs bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60",
+            "fixed inset-y-0 right-0 w-full max-w-xs bg-background",
             "transform transition-transform duration-300 ease-in-out md:hidden",
             "border-l shadow-xl",
             isOpen ? "translate-x-0" : "translate-x-full"
@@ -153,8 +162,25 @@ export default function Navigation() {
                 <li key={item.label} className="text-lg">
                   {item.items ? (
                     <div className="space-y-3">
-                      <span className="font-semibold">{item.label}</span>
-                      <ul className="pl-4 space-y-3">
+                      <button
+                        onClick={() => toggleSection(item.label)}
+                        className="flex items-center justify-between w-full font-semibold"
+                      >
+                        <span>{item.label}</span>
+                        {expandedSections.includes(item.label) ? (
+                          <ChevronUp className="h-5 w-5" />
+                        ) : (
+                          <ChevronDown className="h-5 w-5" />
+                        )}
+                      </button>
+                      <ul
+                        className={cn(
+                          "pl-4 space-y-3 overflow-hidden transition-all duration-300",
+                          expandedSections.includes(item.label)
+                            ? "max-h-96 opacity-100"
+                            : "max-h-0 opacity-0"
+                        )}
+                      >
                         {item.items.map((subItem) => (
                           <li key={subItem.href}>
                             <Link href={subItem.href}>
