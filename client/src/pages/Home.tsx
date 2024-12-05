@@ -14,6 +14,7 @@ export default function Home() {
             src="/path/to/organ-video.mp4"
             poster="https://images.unsplash.com/photo-1613941854763-c237d27c45d3"
             className="w-full h-full object-cover"
+            hero={true}
           />
         </div>
         
@@ -39,12 +40,20 @@ export default function Home() {
         </div>
         
         <div className="absolute bottom-8 left-1/2 -translate-x-1/2">
-          <ArrowDown className="w-8 h-8 animate-bounce-slow" />
+          <ArrowDown 
+            className="w-8 h-8 animate-bounce-slow cursor-pointer" 
+            onClick={() => {
+              document.getElementById('contact')?.scrollIntoView({ 
+                behavior: 'smooth',
+                block: 'start'
+              });
+            }}
+          />
         </div>
       </section>
 
       {/* Contact Form Section */}
-      <section className="max-w-2xl mx-auto px-4">
+      <section id="contact" className="max-w-2xl mx-auto px-4">
         <h2 className="font-cormorant text-4xl font-bold text-center mb-8">
           Contacto
         </h2>

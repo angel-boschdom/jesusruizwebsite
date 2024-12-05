@@ -15,9 +15,10 @@ interface VideoPlayerProps {
   src: string;
   poster?: string;
   className?: string;
+  hero?: boolean;
 }
 
-export default function VideoPlayer({ src, poster, className }: VideoPlayerProps) {
+export default function VideoPlayer({ src, poster, className, hero }: VideoPlayerProps) {
   const [isPlaying, setIsPlaying] = useState(false);
   const [isMuted, setIsMuted] = useState(false);
   const [isFullscreen, setIsFullscreen] = useState(false);
@@ -93,59 +94,65 @@ export default function VideoPlayer({ src, poster, className }: VideoPlayerProps
         poster={poster}
         className="w-full h-full"
         onTimeUpdate={handleTimeUpdate}
+        autoPlay={hero}
+        loop={hero}
+        muted={hero}
+        controls={!hero}
       />
       
-      <div className="absolute bottom-0 left-0 right-0 p-4 bg-gradient-to-t from-black/80 to-transparent opacity-0 group-hover:opacity-100 transition-opacity">
-        <div className="space-y-2">
-          <Slider
-            value={[progress]}
-            max={100}
-            step={0.1}
-            onValueChange={handleProgressChange}
-            className="w-full"
-          />
-          
-          <div className="flex items-center justify-between">
-            <div className="flex items-center space-x-2">
-              <Button
-                variant="ghost"
-                size="icon"
-                onClick={togglePlay}
-                className="text-white hover:text-white/80"
-              >
-                {isPlaying ? <Pause /> : <Play />}
-              </Button>
-              
-              <Button
-                variant="ghost"
-                size="icon"
-                onClick={toggleMute}
-                className="text-white hover:text-white/80"
-              >
-                {isMuted ? <VolumeX /> : <Volume2 />}
-              </Button>
-              
-              <div className="w-24">
-                <Slider
-                  value={[isMuted ? 0 : volume]}
-                  max={1}
-                  step={0.1}
-                  onValueChange={handleVolumeChange}
-                />
-              </div>
-            </div>
+      {!hero && (
+        <div className="absolute bottom-0 left-0 right-0 p-4 bg-gradient-to-t from-black/80 to-transparent opacity-0 group-hover:opacity-100 transition-opacity">
+          <div className="space-y-2">
+            <Slider
+              value={[progress]}
+              max={100}
+              step={0.1}
+              onValueChange={handleProgressChange}
+              className="w-full"
+            />
             
-            <Button
-              variant="ghost"
-              size="icon"
-              onClick={toggleFullscreen}
-              className="text-white hover:text-white/80"
-            >
-              {isFullscreen ? <Minimize /> : <Maximize />}
-            </Button>
+            <div className="flex items-center justify-between">
+              <div className="flex items-center space-x-2">
+                <Button
+                  variant="ghost"
+                  size="icon"
+                  onClick={togglePlay}
+                  className="text-white hover:text-white/80"
+                >
+                  {isPlaying ? <Pause /> : <Play />}
+                </Button>
+                
+                <Button
+                  variant="ghost"
+                  size="icon"
+                  onClick={toggleMute}
+                  className="text-white hover:text-white/80"
+                >
+                  {isMuted ? <VolumeX /> : <Volume2 />}
+                </Button>
+                
+                <div className="w-24">
+                  <Slider
+                    value={[isMuted ? 0 : volume]}
+                    max={1}
+                    step={0.1}
+                    onValueChange={handleVolumeChange}
+                  />
+                </div>
+              </div>
+              
+              <Button
+                variant="ghost"
+                size="icon"
+                onClick={toggleFullscreen}
+                className="text-white hover:text-white/80"
+              >
+                {isFullscreen ? <Minimize /> : <Maximize />}
+              </Button>
+            </div>
           </div>
         </div>
-      </div>
+      )}
     </div>
   );
 }

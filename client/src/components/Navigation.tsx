@@ -48,7 +48,9 @@ export default function Navigation() {
     <header className="sticky top-0 z-50 w-full border-b bg-background/95 backdrop-blur">
       <div className="container flex h-16 items-center justify-between px-4">
         <Link href="/">
-          <a className="font-cormorant text-2xl font-bold">Jesús Ruiz</a>
+          <span className="font-cormorant text-2xl font-bold cursor-pointer">
+            Jesús Ruiz
+          </span>
         </Link>
 
         {/* Mobile menu button */}
@@ -71,17 +73,19 @@ export default function Navigation() {
                     <ul className="grid w-48 gap-1 p-2">
                       {item.items.map((subItem) => (
                         <li key={subItem.href}>
-                          <NavigationMenuLink asChild>
-                            <Link href={subItem.href}>
-                              <a className={cn(
-                                "block select-none rounded-md p-2 leading-none no-underline outline-none",
-                                "hover:bg-accent hover:text-accent-foreground",
-                                location === subItem.href && "bg-accent"
-                              )}>
+                          <Link href={subItem.href}>
+                            <NavigationMenuLink asChild>
+                              <span
+                                className={cn(
+                                  "block select-none rounded-md p-2 leading-none no-underline outline-none cursor-pointer",
+                                  "hover:bg-accent hover:text-accent-foreground",
+                                  location === subItem.href && "bg-accent"
+                                )}
+                              >
                                 {subItem.label}
-                              </a>
-                            </Link>
-                          </NavigationMenuLink>
+                              </span>
+                            </NavigationMenuLink>
+                          </Link>
                         </li>
                       ))}
                     </ul>
@@ -90,13 +94,15 @@ export default function Navigation() {
               ) : (
                 <NavigationMenuItem key={item.href}>
                   <Link href={item.href!}>
-                    <a className={cn(
-                      "block select-none rounded-md p-2 leading-none no-underline outline-none",
-                      "hover:bg-accent hover:text-accent-foreground",
-                      location === item.href && "bg-accent"
-                    )}>
+                    <span
+                      className={cn(
+                        "block select-none rounded-md p-2 leading-none no-underline outline-none cursor-pointer",
+                        "hover:bg-accent hover:text-accent-foreground",
+                        location === item.href && "bg-accent"
+                      )}
+                    >
                       {item.label}
-                    </a>
+                    </span>
                   </Link>
                 </NavigationMenuItem>
               )
@@ -118,7 +124,9 @@ export default function Navigation() {
                           {item.items.map((subItem) => (
                             <li key={subItem.href}>
                               <Link href={subItem.href}>
-                                <a className="block py-1">{subItem.label}</a>
+                                <span className="block py-1 cursor-pointer">
+                                  {subItem.label}
+                                </span>
                               </Link>
                             </li>
                           ))}
@@ -126,7 +134,9 @@ export default function Navigation() {
                       </div>
                     ) : (
                       <Link href={item.href!}>
-                        <a className="block py-1">{item.label}</a>
+                        <span className="block py-1 cursor-pointer">
+                          {item.label}
+                        </span>
                       </Link>
                     )}
                   </li>
