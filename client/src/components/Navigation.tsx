@@ -137,17 +137,17 @@ export default function Navigation() {
           </NavigationMenuList>
         </NavigationMenu>
 
-        {/* Mobile menu */}
-        {isOpen && (
-          <div 
-            className={cn(
-              "fixed inset-0 bg-black/50 z-[998] md:hidden",
-              "transition-opacity duration-300 ease-in-out",
-              isOpen ? "opacity-100" : "opacity-0"
-            )} 
-            onClick={() => setIsOpen(false)} 
-          />
-        )}
+        {/* Mobile menu backdrop */}
+        <div
+          className={cn(
+            "fixed inset-0 bg-black/50 z-[998] md:hidden",
+            "transition-opacity duration-300 ease-in-out",
+            isOpen ? "opacity-100 visible" : "opacity-0 invisible"
+          )}
+          onClick={() => setIsOpen(false)}
+        />
+
+        {/* Mobile menu panel */}
         <div
           className={cn(
             "fixed inset-y-0 right-0 w-full max-w-xs z-[999]",
@@ -193,7 +193,7 @@ export default function Navigation() {
                           "pl-4 space-y-3 overflow-hidden transition-all duration-300",
                           expandedSections.includes(item.label)
                             ? "max-h-96 opacity-100"
-                            : "max-h-0 opacity-0",
+                            : "max-h-0 opacity-0"
                         )}
                       >
                         {item.items.map((subItem) => (
