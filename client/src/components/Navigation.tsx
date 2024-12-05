@@ -31,22 +31,22 @@ export default function Navigation() {
   const [location] = useLocation();
 
   const toggleSection = (section: string) => {
-    setExpandedSections(prev =>
+    setExpandedSections((prev) =>
       prev.includes(section)
-        ? prev.filter(s => s !== section)
-        : [...prev, section]
+        ? prev.filter((s) => s !== section)
+        : [...prev, section],
     );
   };
 
   // Prevent scrolling when mobile menu is open
   useEffect(() => {
     if (isOpen) {
-      document.body.style.overflow = 'hidden';
+      document.body.style.overflow = "hidden";
     } else {
-      document.body.style.overflow = 'unset';
+      document.body.style.overflow = "unset";
     }
     return () => {
-      document.body.style.overflow = 'unset';
+      document.body.style.overflow = "unset";
     };
   }, [isOpen]);
 
@@ -104,7 +104,7 @@ export default function Navigation() {
                                 className={cn(
                                   "block select-none rounded-md p-2 text-sm leading-none no-underline outline-none transition-colors cursor-pointer",
                                   "hover:bg-accent hover:text-accent-foreground",
-                                  location === subItem.href && "bg-accent"
+                                  location === subItem.href && "bg-accent",
                                 )}
                               >
                                 {subItem.label}
@@ -124,7 +124,7 @@ export default function Navigation() {
                         className={cn(
                           "block select-none rounded-md p-2 text-sm leading-none no-underline outline-none transition-colors cursor-pointer",
                           "hover:bg-accent hover:text-accent-foreground",
-                          location === item.href && "bg-accent"
+                          location === item.href && "bg-accent",
                         )}
                       >
                         {item.label}
@@ -132,7 +132,7 @@ export default function Navigation() {
                     </NavigationMenuLink>
                   </Link>
                 </NavigationMenuItem>
-              )
+              ),
             )}
           </NavigationMenuList>
         </NavigationMenu>
@@ -140,10 +140,10 @@ export default function Navigation() {
         {/* Mobile menu */}
         <div
           className={cn(
-            "fixed inset-y-0 right-0 w-full max-w-xs bg-background/100",
+            "fixed inset-y-0 right-0 w-full max-w-xs bg-background",
             "transform transition-transform duration-300 ease-in-out md:hidden",
             "border-l shadow-xl",
-            isOpen ? "translate-x-0" : "translate-x-full"
+            isOpen ? "translate-x-0" : "translate-x-full",
           )}
         >
           <div className="flex h-16 items-center justify-end px-4 border-b">
@@ -178,17 +178,18 @@ export default function Navigation() {
                           "pl-4 space-y-3 overflow-hidden transition-all duration-300",
                           expandedSections.includes(item.label)
                             ? "max-h-96 opacity-100"
-                            : "max-h-0 opacity-0"
+                            : "max-h-0 opacity-0",
                         )}
                       >
                         {item.items.map((subItem) => (
                           <li key={subItem.href}>
                             <Link href={subItem.href}>
-                              <span 
+                              <span
                                 className={cn(
                                   "block py-2 transition-colors cursor-pointer",
                                   "hover:text-accent-foreground",
-                                  location === subItem.href && "text-accent-foreground"
+                                  location === subItem.href &&
+                                    "text-accent-foreground",
                                 )}
                                 onClick={() => setIsOpen(false)}
                               >
@@ -201,11 +202,11 @@ export default function Navigation() {
                     </div>
                   ) : (
                     <Link href={item.href!}>
-                      <span 
+                      <span
                         className={cn(
                           "block py-2 transition-colors cursor-pointer",
                           "hover:text-accent-foreground",
-                          location === item.href && "text-accent-foreground"
+                          location === item.href && "text-accent-foreground",
                         )}
                         onClick={() => setIsOpen(false)}
                       >

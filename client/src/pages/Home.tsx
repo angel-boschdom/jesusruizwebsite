@@ -8,7 +8,7 @@ export default function Home() {
   return (
     <div className="space-y-16">
       {/* Hero Section */}
-      <section className="relative flex items-center justify-center h-[85vh] md:min-h-[calc(100vh-4rem)]">
+      <section className="relative flex items-center justify-center h-[45vh] md:min-h-[calc(100vh-4rem)]">
         <div className="absolute inset-0 z-0 h-full">
           <VideoPlayer
             src="/path/to/organ-video.mp4"
@@ -17,11 +17,9 @@ export default function Home() {
             hero={true}
           />
         </div>
-        
+
         <div className="relative z-10 text-center space-y-6 md:space-y-8 p-6 md:p-8 bg-black/50 rounded-lg backdrop-blur-sm">
-          <h1 className="font-cormorant text-6xl font-bold">
-            JESÚS RUIZ
-          </h1>
+          <h1 className="font-cormorant text-6xl font-bold">JESÚS RUIZ</h1>
           <p className="text-xl max-w-2xl">
             Organista titular de la basílica de Jesús de Medinaceli
           </p>
@@ -38,14 +36,14 @@ export default function Home() {
             </Link>
           </div>
         </div>
-        
+
         <div className="absolute bottom-8 left-1/2 -translate-x-1/2 hidden md:block">
-          <ArrowDown 
-            className="w-8 h-8 animate-bounce-slow cursor-pointer" 
+          <ArrowDown
+            className="w-8 h-8 animate-bounce-slow cursor-pointer"
             onClick={() => {
-              document.getElementById('contact')?.scrollIntoView({ 
-                behavior: 'smooth',
-                block: 'start'
+              document.getElementById("contact")?.scrollIntoView({
+                behavior: "smooth",
+                block: "start",
               });
             }}
           />
