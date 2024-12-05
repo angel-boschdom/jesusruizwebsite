@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { Link, useLocation } from "wouter";
 import { Menu, X } from "lucide-react";
 import {
@@ -29,6 +29,18 @@ export default function Navigation() {
   const [isOpen, setIsOpen] = useState(false);
   const [location] = useLocation();
 
+  // Prevent scrolling when mobile menu is open
+  useEffect(() => {
+    if (isOpen) {
+      document.body.style.overflow = 'hidden';
+    } else {
+      document.body.style.overflow = 'unset';
+    }
+    return () => {
+      document.body.style.overflow = 'unset';
+    };
+  }, [isOpen]);
+
   const navItems = [
     { href: "/", label: "Inicio" },
     { href: "/biografia", label: "Biografía" },
@@ -45,10 +57,10 @@ export default function Navigation() {
   ];
 
   return (
-    <header className="sticky top-0 z-50 w-full border-b bg-background/95 backdrop-blur">
+    <header className="sticky top-0 z-50 w-full border-b bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60">
       <div className="container flex h-16 items-center justify-between px-4">
         <Link href="/">
-          <span className="font-cormorant text-2xl font-bold cursor-pointer">
+          <span className="font-cormorant text-xl sm:text-2xl font-bold cursor-pointer">
             Jesús Ruiz
           </span>
         </Link>
@@ -56,10 +68,12 @@ export default function Navigation() {
         {/* Mobile menu button */}
         <Button
           variant="ghost"
+          size="icon"
           className="md:hidden"
           onClick={() => setIsOpen(!isOpen)}
+          aria-label="Toggle menu"
         >
-          {isOpen ? <X /> : <Menu />}
+          {isOpen ? <X className="h-5 w-5" /> : <Menu className="h-5 w-5" />}
         </Button>
 
         {/* Desktop menu */}
@@ -68,16 +82,18 @@ export default function Navigation() {
             {navItems.map((item) =>
               item.items ? (
                 <NavigationMenuItem key={item.label}>
-                  <NavigationMenuTrigger>{item.label}</NavigationMenuTrigger>
+                  <NavigationMenuTrigger className="h-9 px-4 py-2">
+                    {item.label}
+                  </NavigationMenuTrigger>
                   <NavigationMenuContent>
-                    <ul className="grid w-48 gap-1 p-2">
+                    <ul className="grid w-48 gap-1 p-2 animate-in fade-in slide-in-from-top-2 duration-200">
                       {item.items.map((subItem) => (
                         <li key={subItem.href}>
                           <Link href={subItem.href}>
                             <NavigationMenuLink asChild>
                               <span
                                 className={cn(
-                                  "block select-none rounded-md p-2 leading-none no-underline outline-none cursor-pointer",
+                                  "block select-none rounded-md p-2 text-sm leading-none no-underline outline-none transition-colors cursor-pointer",
                                   "hover:bg-accent hover:text-accent-foreground",
                                   location === subItem.href && "bg-accent"
                                 )}
@@ -94,15 +110,17 @@ export default function Navigation() {
               ) : (
                 <NavigationMenuItem key={item.href}>
                   <Link href={item.href!}>
-                    <span
-                      className={cn(
-                        "block select-none rounded-md p-2 leading-none no-underline outline-none cursor-pointer",
-                        "hover:bg-accent hover:text-accent-foreground",
-                        location === item.href && "bg-accent"
-                      )}
-                    >
-                      {item.label}
-                    </span>
+                    <NavigationMenuLink asChild>
+                      <span
+                        className={cn(
+                          "block select-none rounded-md p-2 text-sm leading-none no-underline outline-none transition-colors cursor-pointer",
+                          "hover:bg-accent hover:text-accent-foreground",
+                          location === item.href && "bg-accent"
+                        )}
+                      >
+                        {item.label}
+                      </span>
+                    </NavigationMenuLink>
                   </Link>
                 </NavigationMenuItem>
               )
@@ -111,40 +129,69 @@ export default function Navigation() {
         </NavigationMenu>
 
         {/* Mobile menu */}
-        {isOpen && (
-          <div className="absolute top-16 left-0 right-0 bg-background border-b md:hidden">
-            <nav className="container px-4 py-4">
-              <ul className="space-y-4">
-                {navItems.map((item) => (
-                  <li key={item.label}>
-                    {item.items ? (
-                      <div className="space-y-2">
-                        <span className="font-semibold">{item.label}</span>
-                        <ul className="pl-4 space-y-2">
-                          {item.items.map((subItem) => (
-                            <li key={subItem.href}>
-                              <Link href={subItem.href}>
-                                <span className="block py-1 cursor-pointer">
-                                  {subItem.label}
-                                </span>
-                              </Link>
-                            </li>
-                          ))}
-                        </ul>
-                      </div>
-                    ) : (
-                      <Link href={item.href!}>
-                        <span className="block py-1 cursor-pointer">
-                          {item.label}
-                        </span>
-                      </Link>
-                    )}
-                  </li>
-                ))}
-              </ul>
-            </nav>
+        <div
+          className={cn(
+            "fixed inset-y-0 right-0 w-full max-w-xs bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60",
+            "transform transition-transform duration-300 ease-in-out md:hidden",
+            "border-l shadow-xl",
+            isOpen ? "translate-x-0" : "translate-x-full"
+          )}
+        >
+          <div className="flex h-16 items-center justify-end px-4 border-b">
+            <Button
+              variant="ghost"
+              size="icon"
+              onClick={() => setIsOpen(false)}
+              aria-label="Close menu"
+            >
+              <X className="h-5 w-5" />
+            </Button>
           </div>
-        )}
+          <nav className="px-4 py-6">
+            <ul className="space-y-6">
+              {navItems.map((item) => (
+                <li key={item.label} className="text-lg">
+                  {item.items ? (
+                    <div className="space-y-3">
+                      <span className="font-semibold">{item.label}</span>
+                      <ul className="pl-4 space-y-3">
+                        {item.items.map((subItem) => (
+                          <li key={subItem.href}>
+                            <Link href={subItem.href}>
+                              <span 
+                                className={cn(
+                                  "block py-2 transition-colors cursor-pointer",
+                                  "hover:text-accent-foreground",
+                                  location === subItem.href && "text-accent-foreground"
+                                )}
+                                onClick={() => setIsOpen(false)}
+                              >
+                                {subItem.label}
+                              </span>
+                            </Link>
+                          </li>
+                        ))}
+                      </ul>
+                    </div>
+                  ) : (
+                    <Link href={item.href!}>
+                      <span 
+                        className={cn(
+                          "block py-2 transition-colors cursor-pointer",
+                          "hover:text-accent-foreground",
+                          location === item.href && "text-accent-foreground"
+                        )}
+                        onClick={() => setIsOpen(false)}
+                      >
+                        {item.label}
+                      </span>
+                    </Link>
+                  )}
+                </li>
+              ))}
+            </ul>
+          </nav>
+        </div>
       </div>
     </header>
   );
