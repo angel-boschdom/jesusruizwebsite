@@ -3,12 +3,14 @@ import react from "@vitejs/plugin-react";
 import themePlugin from "@replit/vite-plugin-shadcn-theme-json";
 import path, { dirname } from "path";
 import checker from "vite-plugin-checker";
-import runtimeErrorOverlay from "@replit/vite-plugin-runtime-error-modal"
+import runtimeErrorOverlay from "@replit/vite-plugin-runtime-error-modal";
 import { fileURLToPath } from "url";
 
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = dirname(__filename);
+
 export default defineConfig({
+  base: '/',  // Set base path to the root for GitHub Pages
   plugins: [
     react(),
     checker({ typescript: true, overlay: false }),
@@ -23,7 +25,7 @@ export default defineConfig({
   },
   root: path.resolve(__dirname, "client"),
   build: {
-    outDir: path.resolve(__dirname, "dist/public"),
+    outDir: path.resolve(__dirname, "dist"),  // Ensure output goes directly to dist
     emptyOutDir: true,
   },
 });
