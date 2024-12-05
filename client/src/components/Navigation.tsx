@@ -139,19 +139,25 @@ export default function Navigation() {
 
         {/* Mobile menu */}
         {isOpen && (
-          <div className="fixed inset-0 bg-black/50 z-[998] md:hidden" onClick={() => setIsOpen(false)} />
+          <div 
+            className={cn(
+              "fixed inset-0 bg-black/50 z-[998] md:hidden",
+              "transition-opacity duration-300 ease-in-out",
+              isOpen ? "opacity-100" : "opacity-0"
+            )} 
+            onClick={() => setIsOpen(false)} 
+          />
         )}
         <div
           className={cn(
             "fixed inset-y-0 right-0 w-full max-w-xs z-[999]",
             "!bg-slate-950",
             "flex flex-col",
-            "transform transition-transform duration-300 ease-in-out",
-            isOpen ? "translate-x-0" : "translate-x-full"
+            "transform transition-all duration-300 ease-in-out",
+            isOpen ? "translate-x-0 opacity-100 visible" : "translate-x-full opacity-0 invisible"
           )}
           style={{
             backgroundColor: 'rgb(2 6 23)',
-            opacity: '1',
             isolation: 'isolate'
           }}
         >
