@@ -144,13 +144,13 @@ export default function Navigation() {
         <div
           className={cn(
             "fixed inset-y-0 right-0 w-full max-w-xs z-[999]",
-            "!bg-white dark:!bg-slate-950",
+            "!bg-slate-950",
             "flex flex-col",
             "transform transition-transform duration-300 ease-in-out",
             isOpen ? "translate-x-0" : "translate-x-full"
           )}
           style={{
-            backgroundColor: 'white',
+            backgroundColor: 'rgb(2 6 23)',
             opacity: '1',
             isolation: 'isolate'
           }}
@@ -173,7 +173,7 @@ export default function Navigation() {
                     <div className="space-y-3">
                       <button
                         onClick={() => toggleSection(item.label)}
-                        className="flex items-center justify-between w-full font-semibold text-gray-900 dark:text-gray-100"
+                        className="flex items-center justify-between w-full font-semibold text-white"
                       >
                         <span>{item.label}</span>
                         {expandedSections.includes(item.label) ? (
@@ -195,7 +195,7 @@ export default function Navigation() {
                             <Link href={subItem.href}>
                               <span
                                 className={cn(
-                                  "block py-2 transition-colors cursor-pointer text-gray-900 dark:text-gray-100",
+                                  "block py-2 transition-colors cursor-pointer text-white",
                                   "hover:text-accent-foreground",
                                   location === subItem.href && "text-accent-foreground"
                                 )}
@@ -212,7 +212,7 @@ export default function Navigation() {
                     <Link href={item.href!}>
                       <span
                         className={cn(
-                          "block py-2 transition-colors cursor-pointer text-gray-900 dark:text-gray-100",
+                          "block py-2 transition-colors cursor-pointer text-white",
                           "hover:text-accent-foreground",
                           location === item.href && "text-accent-foreground"
                         )}
