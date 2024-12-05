@@ -8,7 +8,7 @@ export default function Home() {
   return (
     <div className="space-y-16">
       {/* Hero Section */}
-      <section className="relative flex items-center justify-center h-[45vh] md:min-h-[calc(100vh-4rem)]">
+      <section className="relative flex items-center justify-center h-[65vh] md:min-h-[calc(100vh-4rem)]">
         <div className="absolute inset-0 z-0 h-full">
           <VideoPlayer
             src="/path/to/organ-video.mp4"
@@ -37,7 +37,7 @@ export default function Home() {
           </div>
         </div>
 
-        <div className="absolute bottom-8 left-1/2 -translate-x-1/2 hidden md:block">
+        <div className="absolute bottom-8 left-1/2 -translate-x-1/2">
           <ArrowDown
             className="w-8 h-8 animate-bounce-slow cursor-pointer"
             onClick={() => {
