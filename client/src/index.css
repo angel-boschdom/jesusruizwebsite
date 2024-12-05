@@ -53,6 +53,15 @@
   }
 }
 
+.mobile-menu {
+  position: fixed !important;
+  background-color: white !important;
+}
+
+.dark .mobile-menu {
+  background-color: rgb(2 6 23) !important;
+}
+
 @layer components {
   .mobile-nav {
     background-color: var(--background);
