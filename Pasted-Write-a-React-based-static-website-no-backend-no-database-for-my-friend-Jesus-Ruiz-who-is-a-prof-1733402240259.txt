@@ -1,0 +1,69 @@
+Write a React-based static website (no backend, no database) for my friend Jesus Ruiz, who is a professional organist. The main purpose of the site is for Jesus to make himself known to the world and to keep his customers and fans informed of his activities (concerts, projects, etc.), so that they can attend concerts, or hire him for concerts.
+
+Keep this in mind:
+1. The site must be in Spanish.
+2. It must be responsive (looks great both on mobile and on desktop)
+3. Only marketing: the site is static: no backend, no database.
+4. Dark grey background theme, with white font. Choose a font and theme that inspires the tradition, elegance, and sobriety of classical music and organs.
+5. Include elegant effects (scroll, hover, etc.) that make the site feel pleasant, dynamic, original, and creative. Perhaps add a classical music touch.
+6. Professional, and elegant styles, with dark grey background theme, and fonts that
+7. Site structure (linking):
+		1.Inicio: contains a menu with links to:
+			i. Inicio
+			ii. Biografia
+			iii. Proyectos: this element in the menu unfolds links to these pages:
+				1) El organo
+				2) Musica y liturgia
+				3) Publicaciones
+				4) Festival de Medinaceli
+				5) Ciclo de organo
+			iv. Media
+			v. Eventos: this element in the menu unfolds links to these pages:
+				1) 2024
+				2) 2023
+			vi. Contacto
+
+Important details:
+
+The "Inicio" page contains:
+1) Hero with a video of an organist playing and the following:
+JESÚS RUIZ
+Organista titular de la basílica de Jesús de Medinaceli
+Saber más sobre mí [call to action]
+Mis proyectos [call to action]
+2) A down-pointing arrow that bounces as a call to action, to trigger a scroll down
+3) After the scrolldown there is a Contact form, with checks for validity of the elements:
+Nombre (required)
+Correo electronico (required)
+Mensaje (required)
+Checkbox "Acepto el tratamiento de mis datos"
+Button "Enviar mensaje"
+-> this uses a "mailto" to send the email to jesusrorg@gmail.com without a backend server. The client does it. It is important that no backend is used for this.
+
+The "Media" page contains
+Photos of Jesus
+Videos of past concerts. Use a React component for a video player. The videos are stored as .mp4 files, there is no youtube link. The video player must be elegant and contain the usual expected features of a modern video player. Works both on mobile and on desktop. If possible, reuse a popular high quality React component.
+
+
+The "Eventos" (2024 / 2023) page contains a list of event cards. Use a React component to represent each event. The data for each event is: name, date and time, description, location (show a map so people can click on it to find the place on Google Maps). The events are foldable/unfoldable to show more details or not. When folded, only the name, date, and location are shown.
+
+The "Contacto" page contains:
+Social media links (Instagram @jesusruizorg, Facebook https://www.facebook.com/jesus.ruizgarcia.3785, Instagram @organomedinaceli)
+Contact form (same as described before - perhaps reuse the same React component)
+
+
+The "Biografia" page contains this info, each paragraph associated with an image:
+1) 
+Jesús Ruiz nace en Valdepeñas (Ciudad Real). Desde 2011 es organista titular de la basílica de Jesús de Medinaceli de Madrid. Actualmente es profesor de órgano en el Conservatorio Profesional de Música Arturo Soria de Madrid y profesor en la Escuela Provincial de Órgano de Palencia Fray Domingo de Aguirre (E.P.O.P).
+
+Regularmente ofrece recitales por toda la geografía española y participa en los ciclos y festivales más importantes de España.
+
+2) 
+Comienza sus estudios musicales en su ciudad natal continuándolos en el Conservatorio Profesional de Música Marcos Redondo de Ciudad Real obteniendo el titulo profesional en la especialidad de Piano. Así mismo estudia la especialidad de Musicología en el Real Conservatorio Superior de Música de Madrid. Posteriormente estudia órgano en el Conservatorio Superior de Música de Aragón con la profesora Saskia Rures y en el Centro Superior Katarina Gurska (CSK) de Madrid obteniendo el título superior en la especialidad de Órgano.
+
+Ha trabajado la música en los Cursos Universitarios Internacionales “Música en Compostela” donde obtiene el premio Andrés Segovia- J.M. Ruiz Morales. De igual modo participó como alumno activo en la Academia de Órgano de Andalucía estudiando la música española con el profesor Andrés Cea Galán.
+
+3)
+Jesús Ruiz es un músico comprometido con la conservación y la recuperación del patrimonio. Por esta razón funda la Asociación Amigos del Órgano de Valdepeñas. Esta asociación tiene, entre otros objetivos, fomentar la música, la formación y el estudio de la música escrita para órgano, así como la restauración y la construcción de nuevos instrumentos que permitan el conocimiento de esta disciplina.
+
+Ha dirigido proyectos musicales como el Festival Internacional de Órgano y Música Barroca de Vicálvaro, ha sido organista titular de la Catedral de Getafe cuyo órgano inauguró en 2011 y es autor de varios artículos de investigación.
