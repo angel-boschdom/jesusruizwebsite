@@ -32,8 +32,8 @@ const photos = [
 const videos = [
   {
     title: "Entrevista Babel 2018",
-    src: "/src/assets/babel.mp4",
-    poster: "/src/assets/babel.png"
+    src: "https://angel-boschdom.github.io/jesusruizorganista-media/assets/babel.mp4",
+    poster: "https://angel-boschdom.github.io/jesusruizorganista-media/assets/babel.png"
   },
   {
     title: "Festival de Órgano 2023",

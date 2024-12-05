@@ -85,7 +85,8 @@ export default function VideoPlayer({ src, poster, className, hero }: VideoPlaye
       ref={containerRef}
       className={cn(
         "relative group bg-black rounded-lg overflow-hidden",
-        className
+        className,
+        { 'pointer-events-none': hero } // Disable pointer events in hero mode
       )}
     >
       <video
@@ -100,6 +101,7 @@ export default function VideoPlayer({ src, poster, className, hero }: VideoPlaye
         controls={!hero}
       />
       
+      {/* Render custom controls only when not in hero mode */}
       {!hero && (
         <div className="absolute bottom-0 left-0 right-0 p-4 bg-gradient-to-t from-black/80 to-transparent opacity-0 group-hover:opacity-100 transition-opacity">
           <div className="space-y-2">
