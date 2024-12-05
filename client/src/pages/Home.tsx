@@ -8,7 +8,7 @@ export default function Home() {
   return (
     <div className="space-y-16">
       {/* Hero Section */}
-      <section className="relative flex items-center justify-center">
+      <section className="relative flex items-center justify-center h-[85vh] md:min-h-[calc(100vh-4rem)]">
         <div className="absolute inset-0 z-0 h-full">
           <VideoPlayer
             src="/path/to/organ-video.mp4"
@@ -18,7 +18,7 @@ export default function Home() {
           />
         </div>
         
-        <div className="relative z-10 text-center space-y-8 p-8 bg-black/50 rounded-lg backdrop-blur-sm">
+        <div className="relative z-10 text-center space-y-6 md:space-y-8 p-6 md:p-8 bg-black/50 rounded-lg backdrop-blur-sm">
           <h1 className="font-cormorant text-6xl font-bold">
             JESÚS RUIZ
           </h1>
@@ -53,7 +53,7 @@ export default function Home() {
       </section>
 
       {/* Contact Form Section */}
-      <section id="contact" className="max-w-2xl mx-auto px-4 -mt-16 md:mt-0">
+      <section id="contact" className="max-w-2xl mx-auto px-4 -mt-8 md:-mt-16">
         <h2 className="font-cormorant text-4xl font-bold text-center mb-8">
           Contacto
         </h2>
