@@ -141,7 +141,7 @@ export default function Navigation() {
         <div
           className={cn(
             "fixed inset-y-0 right-0 w-full max-w-xs z-[100]",
-            "bg-background bg-white md:bg-background",
+            "bg-background bg-opacity-100 backdrop-filter-none",
             "transform transition-transform duration-300 ease-in-out md:hidden",
             "border-l shadow-xl",
             isOpen ? "translate-x-0" : "translate-x-full",
