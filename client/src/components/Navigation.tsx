@@ -140,12 +140,10 @@ export default function Navigation() {
         {/* Mobile menu */}
         <div
           className={cn(
-            "mobile-nav",
-            "fixed inset-y-0 right-0 w-full max-w-xs z-[9999]",
-            "bg-background/100 backdrop-filter-none",
-            "transform transition-transform duration-300 ease-in-out md:hidden",
-            "border-l shadow-xl overflow-hidden",
-            isOpen ? "translate-x-0" : "translate-x-full",
+            "fixed inset-0 z-[9999] md:hidden",
+            "bg-white dark:bg-gray-950",
+            "transform transition-transform duration-300 ease-in-out",
+            isOpen ? "translate-x-0" : "translate-x-full"
           )}
         >
           <div className="flex h-16 items-center justify-end px-4 border-b">
@@ -158,15 +156,15 @@ export default function Navigation() {
               <X className="h-5 w-5" />
             </Button>
           </div>
-          <nav className="px-4 py-6">
-            <ul className="space-y-6">
+          <nav className="h-[calc(100vh-4rem)] overflow-y-auto">
+            <ul className="px-4 py-6 space-y-6">
               {navItems.map((item) => (
                 <li key={item.label} className="text-lg">
                   {item.items ? (
                     <div className="space-y-3">
                       <button
                         onClick={() => toggleSection(item.label)}
-                        className="flex items-center justify-between w-full font-semibold"
+                        className="flex items-center justify-between w-full font-semibold text-gray-900 dark:text-gray-100"
                       >
                         <span>{item.label}</span>
                         {expandedSections.includes(item.label) ? (
@@ -188,10 +186,9 @@ export default function Navigation() {
                             <Link href={subItem.href}>
                               <span
                                 className={cn(
-                                  "block py-2 transition-colors cursor-pointer",
+                                  "block py-2 transition-colors cursor-pointer text-gray-900 dark:text-gray-100",
                                   "hover:text-accent-foreground",
-                                  location === subItem.href &&
-                                    "text-accent-foreground",
+                                  location === subItem.href && "text-accent-foreground"
                                 )}
                                 onClick={() => setIsOpen(false)}
                               >
@@ -206,9 +203,9 @@ export default function Navigation() {
                     <Link href={item.href!}>
                       <span
                         className={cn(
-                          "block py-2 transition-colors cursor-pointer",
+                          "block py-2 transition-colors cursor-pointer text-gray-900 dark:text-gray-100",
                           "hover:text-accent-foreground",
-                          location === item.href && "text-accent-foreground",
+                          location === item.href && "text-accent-foreground"
                         )}
                         onClick={() => setIsOpen(false)}
                       >
