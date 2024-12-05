@@ -31,9 +31,9 @@ const photos = [
 
 const videos = [
   {
-    title: "Concierto de Navidad 2023",
-    src: "/path/to/video1.mp4",
-    poster: "https://images.unsplash.com/photo-1488630228244-bcdf33562a43"
+    title: "Entrevista Babel 2018",
+    src: "/src/assets/babel.mp4",
+    poster: "/src/assets/babel.png"
   },
   {
     title: "Festival de Órgano 2023",

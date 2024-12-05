@@ -11,8 +11,8 @@ export default function Home() {
       <section className="relative flex items-center justify-center h-[65vh] md:min-h-[calc(100vh-4rem)]">
         <div className="absolute inset-0 z-0 h-full">
           <VideoPlayer
-            src="/path/to/organ-video.mp4"
-            poster="https://images.unsplash.com/photo-1613941854763-c237d27c45d3"
+            src="src/assets/hero.mp4"
+            poster="/src/assets/babel.png"
             className="w-full h-full object-cover"
             hero={true}
           />
