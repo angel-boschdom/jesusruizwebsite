@@ -66,7 +66,7 @@ export default function Navigation() {
   ];
 
   return (
-    <header className="sticky top-0 z-50 w-full border-b bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60">
+    <header className="sticky top-0 z-50 w-full border-b bg-background">
       <div className="container flex h-16 items-center justify-between px-4">
         <Link href="/">
           <span className="font-cormorant text-xl sm:text-2xl font-bold cursor-pointer">
@@ -143,12 +143,17 @@ export default function Navigation() {
         )}
         <div
           className={cn(
-            "mobile-menu fixed inset-y-0 right-0 w-full max-w-xs z-[999] md:hidden",
-            "bg-white dark:bg-slate-950",
+            "fixed inset-y-0 right-0 w-full max-w-xs z-[999]",
+            "!bg-white dark:!bg-slate-950",
             "flex flex-col",
             "transform transition-transform duration-300 ease-in-out",
             isOpen ? "translate-x-0" : "translate-x-full"
           )}
+          style={{
+            backgroundColor: 'white',
+            opacity: '1',
+            isolation: 'isolate'
+          }}
         >
           <div className="flex h-16 items-center justify-end px-4 border-b">
             <Button
