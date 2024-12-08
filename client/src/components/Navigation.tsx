@@ -21,6 +21,7 @@ const projectsItems = [
 ];
 
 const eventsItems = [
+  { href: "/eventos/2025", label: "2025" },
   { href: "/eventos/2024", label: "2024" },
   { href: "/eventos/2023", label: "2023" },
 ];
