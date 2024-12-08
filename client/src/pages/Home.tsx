@@ -1,54 +1,27 @@
 import { ArrowDown } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Link } from "wouter";
-import VideoPlayer from "@/components/VideoPlayer";
 import ContactForm from "@/components/ContactForm";
+import Hero from "@/components/Hero"; 
 
 export default function Home() {
   return (
     <div className="space-y-16">
-      {/* Hero Section */}
-      <section className="relative flex items-center justify-center h-[65vh] md:min-h-[calc(100vh-4rem)]">
-        <div className="absolute inset-0 z-0 h-full">
-          <VideoPlayer
-            src="https://angel-boschdom.github.io/jesusruizorganista-media/assets/hero.mp4"
-            poster="https://angel-boschdom.github.io/jesusruizorganista-media/assets/babel.png"
-            className="w-full h-full object-cover pointer-events-none"
-            hero={true}
-          />
-        </div>
+      {/* Hero component */}
+      <Hero />
 
-        <div className="relative z-10 text-center space-y-6 md:space-y-8 p-6 md:p-8 bg-black/50 rounded-lg backdrop-blur-sm">
-          <h1 className="font-cormorant text-6xl font-bold">JESÚS RUIZ</h1>
-          <p className="text-xl max-w-2xl">
-            Organista titular de la basílica de Jesús de Medinaceli
-          </p>
-          <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <Link href="/biografia">
-              <Button size="lg" variant="default">
-                Saber más sobre mí
-              </Button>
-            </Link>
-            <Link href="/proyectos">
-              <Button size="lg" variant="outline">
-                Mis proyectos
-              </Button>
-            </Link>
-          </div>
-        </div>
-
-        <div className="absolute bottom-8 left-1/2 -translate-x-1/2">
-          <ArrowDown
-            className="w-8 h-8 animate-bounce-slow cursor-pointer"
-            onClick={() => {
-              document.getElementById("contact")?.scrollIntoView({
-                behavior: "smooth",
-                block: "start",
-              });
-            }}
-          />
-        </div>
-      </section>
+      {/* Arrow Down - placed after Hero */}
+      <div className="flex justify-center">
+        <ArrowDown
+          className="w-8 h-8 animate-bounce-slow cursor-pointer"
+          onClick={() => {
+            document.getElementById("contact")?.scrollIntoView({
+              behavior: "smooth",
+              block: "start",
+            });
+          }}
+        />
+      </div>
 
       {/* Contact Form Section */}
       <section id="contact" className="max-w-2xl mx-auto px-4 -mt-8 md:-mt-16">
