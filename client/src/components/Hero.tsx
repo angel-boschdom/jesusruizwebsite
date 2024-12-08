@@ -30,13 +30,20 @@ export default function Hero() {
           Organista titular de la basílica de Jesús de Medinaceli
         </p>
         <div className="flex flex-col sm:flex-row gap-4 justify-center">
+          {/* Button 1: Saber más sobre mí */}
           <Link href="/biografia">
-            <Button size="lg" variant="default">
+            <Button size="lg" variant="default" className="bg-primary text-primary-foreground">
               Saber más sobre mí
             </Button>
           </Link>
+
+          {/* Button 2: Mis proyectos */}
           <Link href="/proyectos">
-            <Button size="lg" variant="outline" className="text-white border-white/50">
+            <Button
+              size="lg"
+              variant="outline"
+              className="text-secondary-foreground border-secondary bg-black/30 hover:bg-secondary hover:text-secondary-foreground"
+            >
               Mis proyectos
             </Button>
           </Link>
