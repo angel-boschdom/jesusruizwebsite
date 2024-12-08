@@ -5,33 +5,34 @@
 
 @layer base {
   :root {
-    --background: 60 100% 97%;      /* Ivory */
-    --foreground: 210 10% 10%;      /* Near-black text */
+    /* Updated Theme: White / Blue / Gray */
+    --background: 210 20% 98%;       /* Very light grayish-blue, almost white */
+    --foreground: 210 10% 10%;       /* Near-black (charcoal) text color */
 
-    --card: 60 100% 97%;
+    --card: 210 20% 99%;             /* Slightly off-white with a blueish tint */
     --card-foreground: 210 10% 10%;
 
-    --popover: 60 100% 97%;
+    --popover: 210 20% 99%;
     --popover-foreground: 210 10% 10%;
 
-    --primary: 345 100% 25%;        /* Deep Burgundy */
-    --primary-foreground: 60 100% 97%; /* Ivory */
+    --primary: 220 50% 25%;          /* Deep navy blue for primary elements */
+    --primary-foreground: 210 20% 98%; /* Off-white text on primary */
 
-    --secondary: 46 63% 53%;        /* Antique Gold */
-    --secondary-foreground: 60 100% 97%; /* Ivory */
+    --secondary: 210 10% 50%;        /* Medium gray-blue for secondary elements */
+    --secondary-foreground: 210 20% 98%; /* Light text on secondary */
 
-    --muted: 210 10% 80%;
-    --muted-foreground: 210 10% 20%;
+    --muted: 210 10% 80%;            /* Light gray for muted backgrounds */
+    --muted-foreground: 210 10% 20%; /* Darker gray text on muted bg */
 
-    --accent: 46 63% 53%;
-    --accent-foreground: 60 100% 97%;
+    --accent: 215 20% 35%;           /* Steel blue accent for hovers/highlights */
+    --accent-foreground: 210 20% 98%;
 
-    --destructive: 0 62.8% 30.6%;
-    --destructive-foreground: 60 100% 97%;
+    --destructive: 0 62.8% 30.6%;    /* For destructive actions (e.g., delete) */
+    --destructive-foreground: 210 20% 98%;
 
-    --border: 210 10% 80%;
-    --input: 210 10% 95%;
-    --ring: 46 63% 53%;
+    --border: 210 10% 80%;           /* Soft gray border */
+    --input: 210 10% 95%;            /* Very light gray input background */
+    --ring: 220 50% 25%;             /* Focus ring color */
   }
 
   body {
