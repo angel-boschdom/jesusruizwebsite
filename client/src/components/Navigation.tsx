@@ -68,9 +68,9 @@ export default function Navigation() {
     <header className="sticky top-0 z-50 w-full border-b bg-background">
       <div className="container flex h-16 items-center justify-between px-4">
         <Link href="/">
-          <span className="font-cormorant text-xl sm:text-2xl font-bold cursor-pointer">
-            Jesús Ruiz
-          </span>
+        <span className="font-cormorant text-3xl sm:text-4xl font-bold cursor-pointer">
+          Jesús Ruiz
+        </span>
         </Link>
 
         {/* Mobile menu button */}
@@ -81,9 +81,9 @@ export default function Navigation() {
           onClick={() => setIsOpen(!isOpen)}
           aria-label="Toggle menu"
         >
-          {isOpen ? <X className="h-5 w-5" /> : <Menu className="h-5 w-5" />}
+          {isOpen ? <X className="h-8 w-8" /> : <Menu className="h-8 w-8" />}
         </Button>
-
+        
         {/* Desktop menu */}
         <NavigationMenu className="hidden md:flex">
           <NavigationMenuList>
@@ -156,14 +156,14 @@ export default function Navigation() {
           )}
         >
           <div className="flex h-16 items-center justify-end px-4 border-b border-border">
-            <Button
-              variant="ghost"
-              size="icon"
-              onClick={() => setIsOpen(false)}
-              aria-label="Close menu"
-            >
-              <X className="h-5 w-5" />
-            </Button>
+          <Button
+            variant="ghost"
+            size="icon"
+            onClick={() => setIsOpen(false)}
+            aria-label="Close menu"
+          >
+            <X className="h-8 w-8" />
+          </Button>
           </div>
           <nav className="h-[calc(100vh-4rem)] overflow-y-auto">
             <ul className="px-4 py-6 space-y-6">
