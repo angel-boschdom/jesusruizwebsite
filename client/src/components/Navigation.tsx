@@ -66,11 +66,13 @@ export default function Navigation() {
 
   return (
     <header className="sticky top-0 z-50 w-full border-b bg-background">
-      <div className="container flex h-16 items-center justify-between px-4">
+      <div className="container flex h-16 items-center justify-between px-4 relative">
         <Link href="/">
-        <span className="font-cormorant text-3xl sm:text-4xl font-bold cursor-pointer">
-          Jesús Ruiz
-        </span>
+          <img
+            src="https://angel-boschdom.github.io/jesusruizorganista-media/assets/firmajesus.png"
+            alt="Jesús Ruiz Logo"
+            className="h-[120px] cursor-pointer relative top-5"
+          />
         </Link>
 
         {/* Mobile menu button */}
