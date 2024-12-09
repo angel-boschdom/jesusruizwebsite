@@ -32,7 +32,11 @@ export default function Hero() {
         <div className="flex flex-col sm:flex-row gap-4 justify-center">
           {/* Button 1: Saber más sobre mí */}
           <Link href="/biografia">
-            <Button size="lg" variant="default" className="bg-primary text-primary-foreground">
+            <Button
+              size="lg"
+              variant="default"
+              className="bg-primary text-primary-foreground hover:bg-primary/80 hover:shadow-lg hover:scale-105 transition-transform transition-shadow duration-300"
+            >
               Saber más sobre mí
             </Button>
           </Link>
@@ -41,8 +45,8 @@ export default function Hero() {
           <Link href="/eventos/2024">
             <Button
               size="lg"
-              variant="outline"
-              className="text-secondary-foreground border-secondary bg-black/30 hover:bg-secondary hover:text-secondary-foreground"
+              variant="default"
+              className="bg-secondary text-secondary-foreground hover:bg-secondary/80 hover:shadow-lg hover:scale-105 transition-transform transition-shadow duration-300"
             >
               Próximos Eventos
             </Button>
