@@ -4,42 +4,42 @@ import PhotoGallery from "@/components/PhotoGallery";
 
 const photos = [
   {
-    src: "https://images.unsplash.com/photo-1613941854763-c237d27c45d3",
+    src: "https://angel-boschdom.github.io/jesusruizorganista-media/assets/organodefrente.jpg",
     alt: "Órgano clásico en una iglesia"
   },
   {
-    src: "https://images.unsplash.com/photo-1603058824144-081b3981a429",
+    src: "https://angel-boschdom.github.io/jesusruizorganista-media/assets/organolateral.png",
     alt: "Detalle de órgano histórico"
   },
   {
-    src: "https://images.unsplash.com/photo-1533414765079-4bb015a31395",
-    alt: "Vista frontal de órgano"
-  },
-  {
-    src: "https://images.unsplash.com/photo-1515527658517-0a52764f2fdf",
-    alt: "Órgano majestuoso"
-  },
-  {
-    src: "https://images.unsplash.com/photo-1502788686946-ef89b02935cf",
+    src: "https://angel-boschdom.github.io/jesusruizorganista-media/assets/iglesiaorgano1.jpg",
     alt: "Interior de iglesia con órgano"
   },
   {
-    src: "https://images.unsplash.com/photo-1560184611-5b5749138c3c",
-    alt: "Concierto clásico"
+    src: "https://angel-boschdom.github.io/jesusruizorganista-media/assets/babel.png",
+    alt: "Jesús Ruiz tocando el órgano"
+  },
+  {
+    src: "https://angel-boschdom.github.io/jesusruizorganista-media/assets/organojesus1.jpg",
+    alt: "Jesús Ruiz tocando el órgano con dos de sus mentores"
+  },
+  {
+    src: "https://angel-boschdom.github.io/jesusruizorganista-media/assets/jesusorganofondo.jpg",
+    alt: "Retrato de Jesús Ruiz con su órgano"
   }
 ];
 
 const videos = [
   {
+    title: "Restauración del Órgano",
+    src: "https://angel-boschdom.github.io/jesusruizorganista-media/assets/organoconstruyendo.mp4",
+    poster: "https://angel-boschdom.github.io/jesusruizorganista-media/assets/organojesus1.jpg"
+  },
+  {
     title: "Entrevista Babel 2018",
     src: "https://angel-boschdom.github.io/jesusruizorganista-media/assets/babel.mp4",
     poster: "https://angel-boschdom.github.io/jesusruizorganista-media/assets/babel.png"
   },
-  {
-    title: "Festival de Órgano 2023",
-    src: "/path/to/video2.mp4",
-    poster: "https://images.unsplash.com/photo-1474814947326-d835369963a5"
-  }
 ];
 
 export default function Media() {

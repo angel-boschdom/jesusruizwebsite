@@ -37,14 +37,14 @@ export default function Hero() {
             </Button>
           </Link>
 
-          {/* Button 2: Mis proyectos */}
-          <Link href="/proyectos">
+          {/* Button 2: Próximos Eventos */}
+          <Link href="/eventos/2025">
             <Button
               size="lg"
               variant="outline"
               className="text-secondary-foreground border-secondary bg-black/30 hover:bg-secondary hover:text-secondary-foreground"
             >
-              Mis proyectos
+              Próximos Eventos
             </Button>
           </Link>
         </div>
