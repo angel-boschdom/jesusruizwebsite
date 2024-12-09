@@ -197,6 +197,9 @@ export default function Events() {
   const { year = "2024" } = useParams<{ year: string }>();
   const events = eventsData[year as keyof typeof eventsData] || [];
 
+  // Reverse the events so that the oldest are at the bottom
+  const sortedEvents = [...events].reverse();
+
   return (
     <div className="max-w-4xl mx-auto px-4 space-y-8">
       <h1 className="font-cormorant text-5xl font-bold text-center">
@@ -205,8 +208,8 @@ export default function Events() {
 
       <ScrollArea className="h-[calc(100vh-16rem)]">
         <div className="space-y-4 pr-4">
-          {events.length > 0 ? (
-            events.map((event, index) => (
+          {sortedEvents.length > 0 ? (
+            sortedEvents.map((event, index) => (
               <EventCard key={index} {...event} />
             ))
           ) : (
