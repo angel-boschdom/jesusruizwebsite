@@ -71,7 +71,7 @@ export default function Navigation() {
           <img
             src="https://angel-boschdom.github.io/jesusruizorganista-media/assets/firmajesus.png"
             alt="Jesús Ruiz Logo"
-            className="h-[120px] cursor-pointer relative top-5"
+            className="h-[95px] cursor-pointer relative top-4"
           />
         </Link>
 
