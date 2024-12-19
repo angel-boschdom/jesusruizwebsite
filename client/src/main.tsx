@@ -8,6 +8,7 @@ import { Toaster } from "@/components/ui/toaster";
 import Layout from "./components/Layout";
 import Home from "./pages/Home";
 import Biography from "./pages/Biography";
+import Organ from "./pages/Organ";
 import Media from "./pages/Media";
 import Events from "./pages/Events";
 import Contact from "./pages/Contact";
@@ -18,6 +19,7 @@ function Router() {
       <Switch>
         <Route path="/" component={Home} />
         <Route path="/biografia" component={Biography} />
+        <Route path="/proyectos/organo" component={Organ} />
         <Route path="/media" component={Media} />
         <Route path="/eventos/:year" component={Events} />
         <Route path="/contacto" component={Contact} />
