@@ -9,6 +9,7 @@ import Layout from "./components/Layout";
 import Home from "./pages/Home";
 import Biography from "./pages/Biography";
 import Organ from "./pages/Organ";
+import Publications from "./pages/Publications";
 import Media from "./pages/Media";
 import Events from "./pages/Events";
 import Contact from "./pages/Contact";
@@ -20,6 +21,7 @@ function Router() {
         <Route path="/" component={Home} />
         <Route path="/biografia" component={Biography} />
         <Route path="/proyectos/organo" component={Organ} />
+        <Route path="/proyectos/publicaciones" component={Publications} />
         <Route path="/media" component={Media} />
         <Route path="/eventos/:year" component={Events} />
         <Route path="/contacto" component={Contact} />
