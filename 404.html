@@ -5,9 +5,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Redirecting...</title>
     <script>
-      // Redirect to the correct route
-      const path = window.location.pathname;
-      window.location.href = `/${path}`;
+      // Extract the path and add the custom domain or base path
+      const base = "https://jesusruizorganista.com"; // TO DO: avoid hard-coding the domain
+      const path = window.location.pathname + window.location.search + window.location.hash;
+      window.location.href = `${base}${path}`;
     </script>
   </head>
   <body>
