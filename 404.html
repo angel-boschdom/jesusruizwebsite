@@ -5,10 +5,17 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Redirecting...</title>
     <script>
-      // Extract the path and add the custom domain or base path
-      const base = "https://jesusruizorganista.com"; // TO DO: avoid hard-coding the domain
-      const path = window.location.pathname + window.location.search + window.location.hash;
-      window.location.href = `${base}${path}`;
+      // Define the base URL of your site
+      const base = "https://jesusruizorganista.com";
+
+      // Check if the current location already matches the correct base
+      if (!window.location.href.startsWith(base)) {
+        const path = window.location.pathname + window.location.search + window.location.hash;
+        window.location.href = `${base}${path}`;
+      } else {
+        // Prevent looping by displaying a fallback error message
+        document.body.innerHTML = "<p>Unable to redirect. Please check the URL.</p>";
+      }
     </script>
   </head>
   <body>
