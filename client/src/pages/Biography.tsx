@@ -7,7 +7,7 @@ const biographyContent = [
     image: "https://angel-boschdom.github.io/jesusruizorganista-media/assets/jesusorganofondo.jpg",
   },
   {
-    text: "Comenzó sus estudios musicales en su ciudad natal, continuándolos en el Conservatorio Profesional de Música Marcos Redondo de Ciudad Real, donde obtuvo el título profesional en la especialidad de piano. Posteriormente, estudió Musicología en el Real Conservatorio Superior de Música de Madrid y órgano en el Conservatorio Superior de Música de Aragón y el Centro Superior Katarina Gurska (CSK) de Madrid, logrando el título superior. Además, fue profesor de órgano en el Conservatorio Arturo Soria de Madrid. Su formación incluye estudios con reconocidos maestros como Jean-Claude Zehnder, Ton Koopman y Andrés Cea Galán.",
+    text: "Comenzó sus estudios musicales en su ciudad natal, continuándolos en el Conservatorio Profesional de Música Marcos Redondo de Ciudad Real, donde obtuvo el título profesional en la especialidad de piano. Posteriormente, estudió Musicología en el Real Conservatorio Superior de Música de Madrid y órgano en el Conservatorio Superior de Música de Aragón y el Centro Superior Katarina Gurska (CSK) de Madrid, logrando el título superior. Además, fue profesor en la especialidad de órgano del C.P.M Arturo Soria de Madrid. Su formación incluye estudios con reconocidos maestros como Jean-Claude Zehnder, Ton Koopman y Andrés Cea Galán.",
     image: "https://angel-boschdom.github.io/jesusruizorganista-media/assets/jesusbnfuente.jpg",
   },
   {
