@@ -77,34 +77,6 @@ const eventsData = {
       }
     },
     {
-      name: "Festival Internacional de Órgano",
-      date: "20 de Abril, 2024",
-      time: "19:30",
-      description: "Participación especial en el Festival Internacional de Órgano con un programa dedicado a compositores españoles.",
-      location: {
-        name: "Catedral de Getafe",
-        address: "Plaza de la Magdalena, s/n, 28901 Getafe",
-        coordinates: {
-          lat: 40.3039,
-          lng: -3.7292
-        }
-      }
-    },
-    {
-      name: "Concierto: Lucie Záková & Jesús Ruiz",
-      date: "3 de Agosto, 2024",
-      time: "20:00",
-      description: "Concierto de órgano con la participación de Lucie Záková y Jesús Ruiz.",
-      location: {
-        name: "Basílica Arciprestal de Santa María la Mayor de Morella",
-        address: "Carrer de l'Església, s/n, 12300 Morella, Castellón",
-        coordinates: {
-          lat: 40.6189,
-          lng: -0.1002
-        }
-      }
-    },
-    {
       name: "Concierto de Órgano",
       date: "24 de Agosto, 2024",
       time: "21:00",

@@ -42,7 +42,7 @@ export default function Hero() {
           </Link>
 
           {/* Button 2: Próximos Eventos */}
-          <Link href="/agenda/2024">
+          <Link href="/agenda/2025">
             <Button
               size="lg"
               variant="default"
