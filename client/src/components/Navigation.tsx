@@ -16,14 +16,13 @@ const projectsItems = [
   { href: "/proyectos/organo", label: "El órgano" },
   { href: "/proyectos/musica-liturgia", label: "Música y liturgia" },
   { href: "/proyectos/publicaciones", label: "Publicaciones" },
-  { href: "/proyectos/festival-medinaceli", label: "Festival de Medinaceli" },
   { href: "/proyectos/ciclo-organo", label: "Ciclo de órgano" },
 ];
 
-const eventsItems = [
-  { href: "/eventos/2025", label: "2025" },
-  { href: "/eventos/2024", label: "2024" },
-  { href: "/eventos/2023", label: "2023" },
+const agendaItems = [
+  { href: "/agenda/2025", label: "2025" },
+  { href: "/agenda/2024", label: "2024" },
+  { href: "/agenda/2023", label: "2023" },
 ];
 
 export default function Navigation() {
@@ -58,8 +57,8 @@ export default function Navigation() {
     },
     { href: "/media", label: "Media" },
     {
-      label: "Eventos",
-      items: eventsItems,
+      label: "Agenda",
+      items: agendaItems,
     },
     { href: "/contacto", label: "Contacto" },
   ];

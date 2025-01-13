@@ -25,7 +25,7 @@ export default function Layout({ children }: LayoutProps) {
           "text-center text-sm text-muted-foreground"
         )}>
           <p className="font-montserrat">
-            © {new Date().getFullYear()} Jesús Ruiz - Organista
+            © 2024 - {new Date().getFullYear()} Jesús Ruiz - Organista
           </p>
         </div>
       </footer>

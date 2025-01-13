@@ -193,7 +193,7 @@ const eventsData = {
   ]
 };
 
-export default function Events() {
+export default function Agenda() {
   const { year = "2024" } = useParams<{ year: string }>();
   const events = eventsData[year as keyof typeof eventsData] || [];
 
