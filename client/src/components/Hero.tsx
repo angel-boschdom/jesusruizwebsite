@@ -22,7 +22,7 @@ export default function Hero() {
       <div className="absolute inset-0 bg-black/50" />
 
       {/* Content */}
-      <div className="relative z-10 text-center space-y-6 md:space-y-8 p-6 md:p-8 bg-black/50 rounded-lg backdrop-blur-sm max-w-2xl mx-auto">
+      <div className="relative z-8 text-center space-y-6 md:space-y-8 p-6 md:p-8 bg-black/50 rounded-lg backdrop-blur-sm max-w-2xl mx-auto">
         <h1 className="font-cormorant text-6xl font-bold text-white">
           JESÚS RUIZ
         </h1>
