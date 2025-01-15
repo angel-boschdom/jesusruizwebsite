@@ -12,6 +12,7 @@ import Organ from "./pages/Organ";
 import Publications from "./pages/Publications";
 import Media from "./pages/Media";
 import Agenda from "./pages/Agenda";
+import Ciclo from "./pages/Ciclo";
 import Contact from "./pages/Contact";
 
 function Router() {
@@ -24,6 +25,7 @@ function Router() {
         <Route path="/proyectos/publicaciones" component={Publications} />
         <Route path="/media" component={Media} />
         <Route path="/agenda/:year" component={Agenda} />
+        <Route path="/ciclo/:year" component={Ciclo} />
         <Route path="/contacto" component={Contact} />
         <Route>404 - Página no encontrada</Route>
       </Switch>
