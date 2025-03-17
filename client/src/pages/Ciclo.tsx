@@ -1,5 +1,4 @@
 import { useParams } from "wouter";
-import { ScrollArea } from "@/components/ui/scroll-area";
 import ConcertCard from "@/components/ConcertCard";
 import LocationInfo from "@/components/LocationInfo";
 
@@ -64,19 +63,17 @@ export default function Ciclo() {
         lng={-3.6955393}
       />
 
-      <ScrollArea className="h-[calc(100vh-16rem)]">
-        <div className="space-y-4 pr-4">
-          {sortedEvents.length > 0 ? (
-            sortedEvents.map((event, index) => (
-              <ConcertCard key={index} {...event} />
-            ))
-          ) : (
-            <p className="text-center text-muted-foreground">
-              No hay conciertos del ciclo de órgano programados para este año.
-            </p>
-          )}
-        </div>
-      </ScrollArea>
+      <div className="space-y-4 pr-4">
+        {sortedEvents.length > 0 ? (
+          sortedEvents.map((event, index) => (
+            <ConcertCard key={index} {...event} />
+          ))
+        ) : (
+          <p className="text-center text-muted-foreground">
+            No hay conciertos del ciclo de órgano programados para este año.
+          </p>
+        )}
+      </div>
     </div>
   );
 }
