@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset 
+  xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" 
+  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+  xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9 
+  http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd">
+
+  <url>
+    <loc>https://jesusruizorganista.com/</loc>
+    <lastmod>2025-03-17T09:34:03+00:00</lastmod>
+    <priority>1.0</priority>
+  </url>
+
+  <!-- Biografía -->
+  <url>
+    <loc>https://jesusruizorganista.com/biografia</loc>
+    <lastmod>2025-03-17T09:34:03+00:00</lastmod>
+    <priority>0.9</priority>
+  </url>
+
+  <!-- Media -->
+  <url>
+    <loc>https://jesusruizorganista.com/media</loc>
+    <lastmod>2025-03-17T09:34:03+00:00</lastmod>
+    <priority>0.9</priority>
+  </url>
+
+  <!-- Agenda pages -->
+  <url>
+    <loc>https://jesusruizorganista.com/agenda/2023</loc>
+    <lastmod>2025-03-17T09:34:03+00:00</lastmod>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://jesusruizorganista.com/agenda/2024</loc>
+    <lastmod>2025-03-17T09:34:03+00:00</lastmod>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://jesusruizorganista.com/agenda/2025</loc>
+    <lastmod>2025-03-17T09:34:03+00:00</lastmod>
+    <priority>0.8</priority>
+  </url>
+  
+  <!-- Ciclo pages -->
+  <url>
+    <loc>https://jesusruizorganista.com/ciclo/2024</loc>
+    <lastmod>2025-03-17T09:34:03+00:00</lastmod>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://jesusruizorganista.com/ciclo/2025</loc>
+    <lastmod>2025-03-17T09:34:03+00:00</lastmod>
+    <priority>0.8</priority>
+  </url>
+
+  <!-- Proyectos -->
+  <url>
+    <loc>https://jesusruizorganista.com/proyectos/organo</loc>
+    <lastmod>2025-03-17T09:34:03+00:00</lastmod>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://jesusruizorganista.com/proyectos/publicaciones</loc>
+    <lastmod>2025-03-17T09:34:03+00:00</lastmod>
+    <priority>0.8</priority>
+  </url>
+
+  <!-- Contacto -->
+  <url>
+    <loc>https://jesusruizorganista.com/contacto</loc>
+    <lastmod>2025-03-17T09:34:03+00:00</lastmod>
+    <priority>0.7</priority>
+  </url>
+
+</urlset>
