@@ -1,6 +1,7 @@
 import { useParams } from "wouter";
 import { ScrollArea } from "@/components/ui/scroll-area";
 import ConcertCard from "@/components/ConcertCard";
+import LocationInfo from "@/components/LocationInfo";
 
 const concertsData = {
   "2024": [
@@ -39,7 +40,7 @@ const concertsData = {
       time: "12:30",
     },
   ],
-  "2025": [], // Empty or remove if not needed
+  "2025": [],
 };
 
 export default function Ciclo() {
@@ -54,6 +55,14 @@ export default function Ciclo() {
       <h1 className="font-cormorant text-5xl font-bold text-center">
         Ciclo de Órgano - {year}
       </h1>
+
+      {/* Ubicación antes de la lista de conciertos */}
+      <LocationInfo
+        name="Basílica de Jesús de Medinaceli"
+        address="Plaza de Jesús, 2, 28014 Madrid"
+        lat={40.4142196}
+        lng={-3.6955393}
+      />
 
       <ScrollArea className="h-[calc(100vh-16rem)]">
         <div className="space-y-4 pr-4">
