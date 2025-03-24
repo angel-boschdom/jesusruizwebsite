@@ -149,6 +149,62 @@ const eventsData = {
   ],
   "2025": [
     {
+      name: "Audicion de Órgano",
+      date: "30 de Marzo, 2025",
+      time: "13:30",
+      description: "Audición de Órgano en la Basílica de Jesús de Medinaceli.",
+      location: {
+        name: "Basílica de Jesús de Medinaceli",
+        address: "Plaza de Jesús, 2, 28014 Madrid",
+        coordinates: {
+          lat: 40.4140,
+          lng: -3.6980
+        }
+      }
+    },
+    {
+      name: "Concierto de Órgano",
+      date: "2 de Agosto, 2025",
+      time: "", // No time specified
+      description: "Concierto de Órgano",
+      location: {
+        name: "Iglesia parroqual de Nuestra Señora de la Asunción de Villahermosa",
+        address: "Villahermosa, Ciudad Real",
+        coordinates: {
+          lat: 38.7502928,
+          lng: -2.8720938
+        }
+      }
+    },
+    {
+      name: "Concierto de Órgano",
+      date: "22 de Agosto, 2025",
+      time: "", // No time specified
+      description: "Concierto de órgano en la Capilla del Espiritu Santo.",
+      location: {
+        name: "Catedral de Santa MarÍa y San Julián de Cuenca, Capilla del Espiritu Santo",
+        address: "Cuenca",
+        coordinates: {
+          lat: 40.0786099,
+          lng: -2.1294416
+        }
+      }
+    },
+    {
+      name: "Concierto de Órgano",
+      date: "23 de Agosto, 2025",
+      time: "21:00",
+      description: "Órgano histórico, construido por Gaspar de la Redonda en 1763.",
+      location: {
+        name: "Iglesia Parroqual de Nuestra Señora de los Olmos de Torre de Juan Abad",
+        address: "Ciudad Real",
+        coordinates: {
+          lat: 38.5843327,
+          lng: -3.0598674
+        }
+      }
+    },
+    {
       name: "Concierto Internacional de Órgano",
       date: "20 de Diciembre, 2025",
       time: "20:00",
@@ -157,8 +213,8 @@ const eventsData = {
         name: "Chiesa di Santa Maria degli Angeli",
         address: "Piazza Sant'Angelo, 20121 Milano (MI), Italia",
         coordinates: {
-          lat: 45.4750,
-          lng: 9.1870
+          lat: 45.4759096,
+          lng: 9.1924862
         }
       }
     }
