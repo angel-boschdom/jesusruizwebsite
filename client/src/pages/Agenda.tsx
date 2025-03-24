@@ -65,28 +65,28 @@ const eventsData = {
       name: "Festival Internacional de Música de Morella",
       date: "13 de Agosto, 2024",
       time: "20:00",
-      description:
-        "Recital de órgano.",
+      description: "Recital de órgano.",
       location: {
         name: "Basílica Arxiprestal de Morella",
         address: "Pl. de la Iglesia, 12300 Morella (Castellón)",
         coordinates: {
           lat: 40.6192738,
-          lng: -0.1004785,
-        },
-      },
+          lng: -0.1004785
+        }
+      }
     },
     {
       name: "Concierto de Órgano",
       date: "24 de Agosto, 2024",
       time: "21:00",
-      description: "Concierto de órgano en la Iglesia Parroquial de Nuestra Señora de los Olmos.",
+      description:
+        "Concierto de órgano en la Iglesia Parroquial de Nuestra Señora de los Olmos.",
       location: {
         name: "Iglesia Parroquial de Nuestra Señora de los Olmos",
         address: "Torre de Juan Abad (Ciudad Real)",
         coordinates: {
           lat: 38.5843,
-          lng: -3.0590
+          lng: -3.059
         }
       }
     },
@@ -94,13 +94,14 @@ const eventsData = {
       name: "Bendición e Inauguración del Gran Órgano Sinfónico Rieger",
       date: "23 de Noviembre, 2024",
       time: "20:30",
-      description: "Solemne bendición y concierto inaugural del Gran Órgano Sinfónico Rieger en la Basílica de Jesús de Medinaceli.",
+      description:
+        "Solemne bendición y concierto inaugural del Gran Órgano Sinfónico Rieger en la Basílica de Jesús de Medinaceli.",
       location: {
         name: "Basílica de Jesús de Medinaceli",
         address: "Plaza de Jesús, 2, 28014 Madrid",
         coordinates: {
-          lat: 40.4140,
-          lng: -3.6980
+          lat: 40.414,
+          lng: -3.698
         }
       }
     },
@@ -108,13 +109,14 @@ const eventsData = {
       name: "Misa Solemne: Jesucristo Rey del Universo",
       date: "24 de Noviembre, 2024",
       time: "13:00",
-      description: "Solemnidad de Jesucristo Rey del Universo con Coro Dulcimer/Ensemble Quadrivium, Víctor Nájera (director).",
+      description:
+        "Solemnidad de Jesucristo Rey del Universo con Coro Dulcimer/Ensemble Quadrivium, Víctor Nájera (director).",
       location: {
         name: "Basílica de Jesús de Medinaceli",
         address: "Plaza de Jesús, 2, 28014 Madrid",
         coordinates: {
-          lat: 40.4140,
-          lng: -3.6980
+          lat: 40.414,
+          lng: -3.698
         }
       }
     },
@@ -127,8 +129,8 @@ const eventsData = {
         name: "Basílica de Jesús de Medinaceli",
         address: "Plaza de Jesús, 2, 28014 Madrid",
         coordinates: {
-          lat: 40.4140,
-          lng: -3.6980
+          lat: 40.414,
+          lng: -3.698
         }
       }
     },
@@ -157,15 +159,15 @@ const eventsData = {
         name: "Basílica de Jesús de Medinaceli",
         address: "Plaza de Jesús, 2, 28014 Madrid",
         coordinates: {
-          lat: 40.4140,
-          lng: -3.6980
+          lat: 40.414,
+          lng: -3.698
         }
       }
     },
     {
       name: "Concierto de Órgano",
       date: "2 de Agosto, 2025",
-      time: "", // No time specified
+      time: "",
       description: "Concierto de Órgano",
       location: {
         name: "Iglesia parroqual de Nuestra Señora de la Asunción de Villahermosa",
@@ -179,7 +181,7 @@ const eventsData = {
     {
       name: "Concierto de Órgano",
       date: "22 de Agosto, 2025",
-      time: "", // No time specified
+      time: "",
       description: "Concierto de órgano en la Capilla del Espiritu Santo.",
       location: {
         name: "Catedral de Santa MarÍa y San Julián de Cuenca, Capilla del Espiritu Santo",
@@ -215,6 +217,23 @@ const eventsData = {
         coordinates: {
           lat: 45.4759096,
           lng: 9.1924862
+        }
+      }
+    }
+  ],
+  "2026": [
+    {
+      name: "Concierto de Órgano (Munich, Alemania)",
+      date: "6 de mayo, 2026",
+      time: "",
+      description:
+        "Órgano Orgelbau Klais construido en 2020. Pendiente de confirmación.",
+      location: {
+        name: "Iglesia de Santa Margarita de Múnich",
+        address: "Múnich, Alemania",
+        coordinates: {
+          lat: 48.1201464,
+          lng: 11.5395635
         }
       }
     }
