@@ -62,72 +62,11 @@ const eventsData = {
   ],
   "2024": [
     {
-      name: "Concierto de Órgano - Música Barroca",
-      date: "15 de Marzo, 2024",
-      time: "20:00",
-      description: "Interpretación de obras maestras del barroco en el órgano histórico de la Basílica de Jesús de Medinaceli.",
-      location: {
-        name: "Basílica de Jesús de Medinaceli",
-        address: "Plaza de Jesús, 2, 28014 Madrid",
-        coordinates: {
-          lat: 40.4140,
-          lng: -3.6980
-        }
-      }
-    },
-    // Festival Internacional de Música de Morella (11-14 de agosto)
-    {
-      name: "Festival Internacional de Música de Morella - Día 1",
-      date: "11 de Agosto, 2024",
-      time: "20:00",
-      description:
-        "Recital de órgano a cargo de Montserrat Torrent (Premio Nacional de Música, Catedrática Emérita del Conservatorio de Barcelona).",
-      location: {
-        name: "Basílica Arxiprestal de Morella",
-        address: "Pl. de la Iglesia, 12300 Morella (Castellón)",
-        coordinates: {
-          lat: 40.6192738,
-          lng: -0.1004785,
-        },
-      },
-    },
-    {
-      name: "Festival Internacional de Música de Morella - Día 2",
-      date: "12 de Agosto, 2024",
-      time: "11:00, 12:30, 17:00, 20:00",
-      description:
-        "Visitas-audiciones de órgano en la Basílica Arxiprestal (11:00, 12:30, 17:00). " +
-        "20:00 - Teatro Municipal: GALA LÍRICA (Ópera y Zarzuela) con Saray García (soprano), Pascual Andreu (tenor), José Madrid (piano).",
-      location: {
-        name: "Basílica Arxiprestal de Morella / Teatro Municipal de Morella",
-        address: "12300 Morella (Castellón)",
-        coordinates: {
-          lat: 40.6192738,
-          lng: -0.1004785,
-        },
-      },
-    },
-    {
-      name: "Festival Internacional de Música de Morella - Día 3",
+      name: "Festival Internacional de Música de Morella",
       date: "13 de Agosto, 2024",
       time: "20:00",
       description:
-        "Recital de órgano con Lucie Záková (Organista, Concertista Internacional (Rep. Checa)) y Jesús Ruiz (Organista de la Basílica de Jesús de Medinaceli, Madrid).",
-      location: {
-        name: "Basílica Arxiprestal de Morella",
-        address: "Pl. de la Iglesia, 12300 Morella (Castellón)",
-        coordinates: {
-          lat: 40.6192738,
-          lng: -0.1004785,
-        },
-      },
-    },
-    {
-      name: "Festival Internacional de Música de Morella - Día 4",
-      date: "14 de Agosto, 2024",
-      time: "20:00",
-      description:
-        "Concierto de trompeta y órgano con Arturo Barba (Catedrático del Conservatorio Superior de Valencia) y Raúl Junquera (Trompeta solista de la Orquesta de València).",
+        "Recital de órgano.",
       location: {
         name: "Basílica Arxiprestal de Morella",
         address: "Pl. de la Iglesia, 12300 Morella (Castellón)",
