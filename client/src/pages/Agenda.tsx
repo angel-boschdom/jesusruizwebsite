@@ -151,7 +151,21 @@ const eventsData = {
   ],
   "2025": [
     {
-      name: "Audicion de Órgano",
+      name: "Concierto N° 5 de la Orquesta Sinfónica de Madrid",
+      date: "5 de Marzo, 2025",
+      time: "19:30",
+      description: "Luis Miguel Méndez, director",
+      location: {
+        name: "Auditorio Nacional de Música de Madrid",
+        address: "Príncipe de Vergara 146, 28002 Madrid",
+        coordinates: {
+          lat: 40.4460179,
+          lng: -3.6779929
+        }
+      }
+    },
+    {
+      name: "Audición de Órgano",
       date: "30 de Marzo, 2025",
       time: "13:30",
       description: "Audición de Órgano en la Basílica de Jesús de Medinaceli.",
@@ -170,7 +184,7 @@ const eventsData = {
       time: "",
       description: "Concierto de Órgano",
       location: {
-        name: "Iglesia parroqual de Nuestra Señora de la Asunción de Villahermosa",
+        name: "Iglesia Parroquial de Nuestra Señora de la Asunción de Villahermosa",
         address: "Villahermosa, Ciudad Real",
         coordinates: {
           lat: 38.7502928,
