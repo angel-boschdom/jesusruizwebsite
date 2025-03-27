@@ -194,20 +194,6 @@ const eventsData = {
     },
     {
       name: "Concierto de Órgano",
-      date: "22 de Agosto, 2025",
-      time: "",
-      description: "Concierto de órgano en la Capilla del Espiritu Santo.",
-      location: {
-        name: "Catedral de Santa MarÍa y San Julián de Cuenca, Capilla del Espiritu Santo",
-        address: "Cuenca",
-        coordinates: {
-          lat: 40.0786099,
-          lng: -2.1294416
-        }
-      }
-    },
-    {
-      name: "Concierto de Órgano",
       date: "23 de Agosto, 2025",
       time: "21:00",
       description: "Órgano histórico, construido por Gaspar de la Redonda en 1763.",
