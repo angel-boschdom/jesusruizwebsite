@@ -193,6 +193,21 @@ const eventsData = {
       }
     },
     {
+      name: "Música en la Catedral de Cuenca 2025",
+      date: "22 de Agosto, 2025",
+      time: "21:00",
+      description:
+        "Recital de órgano «Tejer el viento» dentro del XV ciclo “Música en la Catedral de Cuenca”.",
+      location: {
+        name: "Catedral de San Julián (Cuenca) - Órgano del Espíritu Santo",
+        address: "Plaza Mayor, s/n, 16001 Cuenca",
+        coordinates: {
+          lat: 40.0785364,
+          lng: -2.129266
+        }
+      }
+     },
+    {
       name: "Concierto de Órgano",
       date: "23 de Agosto, 2025",
       time: "21:00",
