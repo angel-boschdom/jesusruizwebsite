@@ -10,6 +10,7 @@ const projectsItems: NavItem[] = [
 ];
 
 const cicloOrganoItems: NavItem[] = [
+  { href: "/ciclo/2026", label: "2026" },
   { href: "/ciclo/2025", label: "2025" },
   { href: "/ciclo/2024", label: "2024" },
 ];

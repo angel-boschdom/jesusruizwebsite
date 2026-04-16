@@ -40,6 +40,50 @@ const concertsData = {
     },
   ],
   "2025": [],
+  "2026": [
+    {
+      artistName: "Giulio Mercati",
+      artistTitle: "I Ciclo Internacional de Conciertos de Órgano",
+      date: "Jueves 30 de abril",
+      time: "20:30",
+    },
+    {
+      artistName: "Esther Ciudad",
+      artistTitle: "I Ciclo Internacional de Conciertos de Órgano",
+      date: "Sábado 16 de mayo",
+      time: "12:30",
+    },
+    {
+      artistName: "Jesús Ruiz",
+      artistTitle: "I Ciclo Internacional de Conciertos de Órgano",
+      date: "Sábado 30 de mayo",
+      time: "12:30",
+    },
+    {
+      artistName: "Lucie Záková",
+      artistTitle: "I Ciclo Internacional de Conciertos de Órgano",
+      date: "Sábado 6 de junio",
+      time: "12:30",
+    },
+    {
+      artistName: "Anton Shkliaruk",
+      artistTitle: "Órgano. Noelia González, piano. Alberto Serrano, trompeta.",
+      date: "Sábado 13 de junio",
+      time: "12:30",
+    },
+    {
+      artistName: "Arturo Barba",
+      artistTitle: "I Ciclo Internacional de Conciertos de Órgano",
+      date: "Sábado 26 de septiembre",
+      time: "12:30",
+    },
+    {
+      artistName: "Christian Bischop",
+      artistTitle: "I Ciclo Internacional de Conciertos de Órgano",
+      date: "Sábado 3 de octubre",
+      time: "12:30",
+    },
+  ],
 };
 
 export default function Ciclo() {

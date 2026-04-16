@@ -242,13 +242,69 @@ const eventsData = {
       date: "6 de mayo, 2026",
       time: "",
       description:
-        "Órgano Orgelbau Klais construido en 2020. Pendiente de confirmación.",
+        "Órgano Orgelbau Klais construido en 2020. Obras de Bach, Franck, Guridi, Torres, Vierne.",
       location: {
         name: "Iglesia de Santa Margarita de Múnich",
         address: "Múnich, Alemania",
         coordinates: {
           lat: 48.1201464,
           lng: 11.5395635
+        }
+      }
+    },
+    {
+      name: "Recital de Órgano",
+      date: "30 de mayo, 2026",
+      time: "12:30",
+      description: "Obras de Bach, Vierne, Guridi, Liszt.",
+      location: {
+        name: "Basílica de Jesús de Medinaceli",
+        address: "Plaza de Jesús, 2, 28014 Madrid",
+        coordinates: {
+          lat: 40.4142196,
+          lng: -3.6955393
+        }
+      }
+    },
+    {
+      name: "Recital de Órgano",
+      date: "14 de julio, 2026",
+      time: "20:30",
+      description: "Obras de Guridi, Torres, Vierne.",
+      location: {
+        name: "Iglesia de Santiago",
+        address: "Valladolid",
+        coordinates: {
+          lat: 41.6522518,
+          lng: -4.7286062
+        }
+      }
+    },
+    {
+      name: "Recital de Órgano",
+      date: "22 de agosto, 2026",
+      time: "21:00",
+      description: "Obras de Correa de Arauxo, Cabezón, Buxtehude.",
+      location: {
+        name: "Iglesia Parroquial de Nuestra Señora de los Olmos",
+        address: "Torre de Juan Abad (Ciudad Real)",
+        coordinates: {
+          lat: 38.5843327,
+          lng: -3.0598674
+        }
+      }
+    },
+    {
+      name: "Recital de Órgano",
+      date: "24 de octubre, 2026",
+      time: "16:00",
+      description: "Obras de Vierne, Liszt, Bach, Guridi.",
+      location: {
+        name: "Monasterio de St. Ottilien",
+        address: "Sankt Ottilien, Baviera (DE)",
+        coordinates: {
+          lat: 48.1058,
+          lng: 11.0335
         }
       }
     }
